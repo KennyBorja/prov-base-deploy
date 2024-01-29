@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Swal from 'sweetalert2'
 
-const apiBaseUrl = process.env.REACT_APP_API_URL||"http://localhost:3001";
+const apiBaseUrl = process.env.REACT_APP_API_URL;
 
 
 function App() {
