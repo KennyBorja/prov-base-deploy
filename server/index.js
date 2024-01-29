@@ -4,8 +4,22 @@ const mysql = require("mysql");
 const cors = require("cors");
 const config = require("./config");
 
-app.use(cors());
+
+
+
+
 app.use(express.json());
+
+const corsOptions = {
+    origin: config.frontendURL,  // Reemplaza con la URL de tu frontend local
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+    optionsSuccessStatus: 204,
+  };
+  
+  app.use(cors(corsOptions));
+  
+
 
 const db = mysql.createConnection({
     host: config.host,
